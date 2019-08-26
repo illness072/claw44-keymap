@@ -36,6 +36,7 @@ enum macro_keycodes {
 
 #define KC_LSPC LT(_LOWER, KC_SPC)
 #define KC_RSPC LT(_RAISE, KC_SPC)
+#define KC_SPFT SFT_T(KC_SPC)
 
 #define KC_VU KC__VOLUP
 #define KC_VD KC__VOLDOWN
@@ -50,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|    |----+----+----+----+----+----|
      LSFT, Z  , X  , C  , V  , B  ,      N  , M  ,COMM,DOT ,SLSH,BSLS,
   //`----+----+----+----+----+----/    \----+----+----+----+----+----'
-               LALT,LCMD,LSPC,LSFT,     ENT ,RSPC,BSPC,
+               LALT,LCMD,LSPC,SPFT,     SPFT,RSPC,ENT ,BSPC
   //          `----+----+----+----'    `----+----+----+----'
   ),
 
@@ -62,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|    |----+----+----+----+----+----|
          ,PLUS,EQL ,LCBR,LBRC,LPRN,     RPRN,RBRC,RCBR,GRV ,TILD,    ,
   //`----+----+----+----+----+----/    \----+----+----+----+----+----'
-               LALT,LCMD,LSPC,LSFT,     ENT ,RSPC,BSPC,
+               LALT,LCMD,LSPC,SPFT,     SPFT,RSPC,ENT ,BSPC
   //          `----+----+----+----'    `----+----+----+----'
   ),
 
@@ -74,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|    |----+----+----+----+----+----|
          ,BRMD,BRMU,    ,    ,    ,     HOME,PGDN,PGUP,END ,    ,    ,
   //`----+----+----+----+----+----/    \----+----+----+----+----+----'
-               LALT,LCMD,LSPC,LSFT,     ENT ,RSPC,DEL ,
+               LALT,LCMD,LSPC,SPFT,     SPFT,RSPC,ENT ,DEL
   //          `----+----+----+----'    `----+----+----+----'
   )
 };
