@@ -31,8 +31,8 @@ enum macro_keycodes {
 #define KC_XXXX KC_NO
 
 #define KC_C_Z LCTL(KC_Z)
-#define KC_LOWER LOWER
-#define KC_RAISE RAISE
+#define KC_LOW LOWER
+#define KC_RAI RAISE
 
 #define KC_LSPC LT(_LOWER, KC_SPC)
 #define KC_RSPC LT(_RAISE, KC_SPC)
@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|                        |----+----+----+----+----+----|
      LSFT, Z  , X  , C  , V  , B  ,                          N  , M  ,COMM,DOT ,SLSH,BSLS,
   //`----+----+----+----+----+----+----+----.    ,----+----+----+----+----+----+----+----'
-                         LALT,LCMD,LSPC,LSFT,     RSFT,RSPC,ENT ,BSPC
+                         LALT,LCMD,SPFT,LOW ,     RAI, SPFT,ENT ,BSPC
   //                    `----+----+----+----'    `----+----+----+----'
   ),
 
@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|                        |----+----+----+----+----+----|
          ,PLUS,EQL ,LCBR,LBRC,LPRN,                         RPRN,RBRC,RCBR,GRV ,TILD,    ,
   //`----+----+----+----+----+----+----+----.    ,----+----+----+----+----+----+----+----'
-                         LALT,LCMD,LSPC,LSFT,     RSFT,RSPC,ENT ,BSPC
+                         LALT,LCMD,SPFT,LOW ,     RAI, SPFT,ENT ,BSPC
   //                    `----+----+----+----'    `----+----+----+----'
   ),
 
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|                        |----+----+----+----+----+----|
          ,BRMD,BRMU,    ,    ,    ,                         HOME,PGDN,PGUP,END ,    ,    ,
   //`----+----+----+----+----+----+----+----.    ,----+----+----+----+----+----+----+----'
-                         LALT,LCMD,LSPC,LSFT,     RSFT,RSPC,ENT ,DEL
+                         LALT,LCMD,SPFT,LOW ,     RAI, SPFT,ENT ,DEL
   //                    `----+----+----+----'    `----+----+----+----'
   )
 };
