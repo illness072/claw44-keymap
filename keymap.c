@@ -37,8 +37,10 @@ enum macro_keycodes {
 #define KC_LSPC LT(_LOWER, KC_SPC)
 #define KC_RSPC LT(_RAISE, KC_SPC)
 #define KC_RENT LT(_RAISE, KC_ENT)
+#define KC_RBSP LT(_RAISE, KC_BSPC)
 #define KC_SPFT SFT_T(KC_SPC)
 #define KC_ALBS ALT_T(KC_BSPC)
+#define KC_ALEN ALT_T(KC_ENT)
 
 #define KC_VU KC__VOLUP
 #define KC_VD KC__VOLDOWN
@@ -53,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|                        |----+----+----+----+----+----|
      LSFT, Z  , X  , C  , V  , B  ,                          N  , M  ,COMM,DOT ,SLSH,BSLS,
   //`----+----+----+----+----+----+----+----.    ,----+----+----+----+----+----+----+----'
-                         LCMD,LSFT,LSPC,LOW ,     RAI, RSPC,ENT ,ALBS
+                         LOW ,LCMD,SPFT,LCTL,     BSPC,SPFT,ALEN,RAI
   //                    `----+----+----+----'    `----+----+----+----'
   ),
 
@@ -65,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|                        |----+----+----+----+----+----|
          ,PLUS,EQL ,LCBR,LBRC,LPRN,                         RPRN,RBRC,RCBR,GRV ,TILD,    ,
   //`----+----+----+----+----+----+----+----.    ,----+----+----+----+----+----+----+----'
-                         LCMD,LSFT,LSPC,LOW ,     RAI, RSPC,ENT ,ALBS
+                         LOW ,LCMD,SPFT,LCTL,     BSPC,SPFT,ALEN,RAI
   //                    `----+----+----+----'    `----+----+----+----'
   ),
 
@@ -77,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|                        |----+----+----+----+----+----|
          ,BRMD,BRMU,    ,    ,    ,                         HOME,PGDN,PGUP,END ,    ,    ,
   //`----+----+----+----+----+----+----+----.    ,----+----+----+----+----+----+----+----'
-                         LCMD,LSFT,LSPC,LOW ,     RAI, RSPC,ENT ,DEL
+                         LOW ,LCMD,SPFT,LCTL,     DEL ,SPFT,ALEN,RAI
   //                    `----+----+----+----'    `----+----+----+----'
   )
 };
