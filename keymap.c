@@ -42,6 +42,7 @@ enum macro_keycodes {
 #define KC_S_EN SFT_T(KC_ENT)
 #define KC_ALBS ALT_T(KC_BSPC)
 #define KC_ALEN ALT_T(KC_ENT)
+#define KC_DCTL CTL_T(KC_DEL)
 
 #define KC_VU KC__VOLUP
 #define KC_VD KC__VOLDOWN
@@ -56,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|                        |----+----+----+----+----+----|
      LSFT, Z  , X  , C  , V  , B  ,                          N  , M  ,COMM,DOT ,SLSH,BSLS,
   //`----+----+----+----+----+----+----+----.    ,----+----+----+----+----+----+----+----'
-                         LALT,LCMD,LSPC,LSFT,     LCTL,RSPC,S_EN,BSPC
+                         LALT,LCMD,LSPC,LSFT,     DCTL,RSPC,S_EN,BSPC
   //                    `----+----+----+----'    `----+----+----+----'
   ),
 
@@ -68,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|                        |----+----+----+----+----+----|
      LSFT,PLUS,EQL ,LCBR,LBRC,LPRN,                         RPRN,RBRC,RCBR,GRV ,TILD,    ,
   //`----+----+----+----+----+----+----+----.    ,----+----+----+----+----+----+----+----'
-                         LALT,LCMD,LSPC,LSFT,     LCTL,RSPC,S_EN,BSPC
+                         LALT,LCMD,    ,LSFT,     DCTL,    ,S_EN,BSPC
   //                    `----+----+----+----'    `----+----+----+----'
   ),
 
@@ -80,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|                        |----+----+----+----+----+----|
      LSFT,BRMD,BRMU,    ,    ,    ,                         HOME,PGDN,PGUP,END ,    ,    ,
   //`----+----+----+----+----+----+----+----.    ,----+----+----+----+----+----+----+----'
-                         LALT,LCMD,LSPC,LSFT,     LCTL,RSPC,S_EN,DEL
+                         LALT,LCMD,    ,LSFT,     DCTL,    ,S_EN,BSPC
   //                    `----+----+----+----'    `----+----+----+----'
   )
 };
